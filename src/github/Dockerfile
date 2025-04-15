@@ -1,7 +1,7 @@
 FROM m.daocloud.io/docker.io/library/node:22.12-alpine AS builder
 
 # Must be entire project because `prepare` script is run during `npm install` and requires all files.
-COPY src/github /app
+COPY . /app
 COPY tsconfig.json /tsconfig.json
 
 WORKDIR /app
